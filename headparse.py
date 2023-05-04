@@ -86,8 +86,6 @@ class Headparse:
                 text = " ".join([token["form"] for token in sentence])
                 doc = nlp(text)
                 for i, token in enumerate(sentence):
-                    print(token['id'])
-                    print(str(doc[i].head.i + 1))
                     token["head"] = str(doc[i].head.i + 1)  # ajouter 1 car le comptage commence à partir de 0 dans spaCy et de 1 dans CoNLL-U
 
             # Réécrire les données modifiées dans le fichier CoNLL-U

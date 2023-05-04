@@ -50,6 +50,11 @@ class Lemmatisation:
                     lemma = doc.sentences[0].words[0].lemma
                     # Ajouter le lemme à la colonne "lemma" du token
                     token["lemma"]= lemma
+                    # la phase d’imprégnation
+                    if token["form"] == "du":
+                        token["lemma"] = "de le | du"
+                    if token["form"] == "des":
+                        token["lemma"] = "de les | des"
 
             # Réécrire les données modifiées dans le fichier CoNLL-U
             with open(conllu_filename, "w", encoding="utf-8") as file:
@@ -89,6 +94,11 @@ class Lemmatisation:
                     lemma = doc[0].lemma_
                     # Ajouter le lemme à la colonne "lemma" du token
                     token["lemma"] = lemma
+                    # la phase d’imprégnation
+                    if token["form"] == "du":
+                        token["lemma"] = "de le | du"
+                    if token["form"] == "des":
+                        token["lemma"] = "de les | des"
 
             # Réécrire les données modifiées dans le fichier CoNLL-U
             with open(conllu_filename, "w", encoding="utf-8") as file:
@@ -128,6 +138,11 @@ class Lemmatisation:
                     lemma = doc[0].lemma_
                     # Ajouter le lemme à la colonne "lemma" du token
                     token["lemma"] = lemma
+                    # la phase d’imprégnation
+                    if token["form"] == "du":
+                        token["lemma"] = "de le | du"
+                    if token["form"] == "des":
+                        token["lemma"] = "de les | des"
 
             # Réécrire les données modifiées dans le fichier CoNLL-U
             with open(conllu_filename, "w", encoding="utf-8") as file:

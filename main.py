@@ -16,19 +16,19 @@ if __name__=="__main__":
         },
         "pos": {
                 "tool":"stanza",
-                "model":"partut"
+                "model":"standard"
         },
         "feats": {
-            "tool": "stanza",
-            "model": "partut"
+            "tool": "udpipe",
+            "model": "fr"
         },
         "lemma": {
-                "tool":"spacy",
-                "model":"fr_core_news_sm",
+                "tool":"stanza",
+                "model":"standard",
         },
         "headparse": {
-            "tool": "stanza",
-            "model": "standard"
+            "tool": "spacy",
+            "model": "fr_core_news_sm"
         },
         "depparse": {
                 "tool":"spacy",
