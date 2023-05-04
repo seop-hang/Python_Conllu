@@ -8,6 +8,7 @@ from headparse import Headparse
 if __name__=="__main__":
     xml_file="./test.xml"
     conllu_file="./test.conllu"
+    x_path="//p"
     processors={
         "language":"fr",
         "tokenize" : {
@@ -35,7 +36,7 @@ if __name__=="__main__":
                 "model":"fr_core_news_sm"
         }
     }
-    Tokenisation.tokenize_xml(xml_file,"//p",conllu_file,processors)
+    Tokenisation.tokenize_xml(xml_file,x_path,conllu_file,processors)
     Lemmatisation.lemma_wrapper(conllu_file,processors)
     Posparse.pos_wrapper(conllu_file,processors)
     Featsparse.feats_wrapper(conllu_file,processors)
